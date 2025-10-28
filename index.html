@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyRush - Tu tienda digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index1.css">
+</head>
+<body class="bg-white">
+    <!-- Navbar -->
+    <nav class="navbar-bg sticky top-0 z-50">
+        <div class="py-4 px-6 border-b border-gray-800/50">
+            <div class="max-w-7xl mx-auto flex items-center justify-between gap-8">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="block transition-transform hover:scale-105">
+                        <img src="images/logo.png" alt="KeyRush" class="h-16">
+                    </a>
+                </div>
+
+                <!-- Búsqueda -->
+                <div class="flex-1 max-w-2xl">
+                    <div class="relative group">
+                        <input type="text" placeholder="Buscar juegos, software, suscripciones..." class="w-full py-3 px-5 pr-12 rounded-xl search-input text-sm">
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#5BC0FF] transition-colors">
+                            <i class="fas fa-search text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Iconos de acción -->
+                <div class="flex items-center gap-6">
+                    <button class="icon-btn text-white">
+                        <i class="far fa-user text-2xl"></i>
+                        <span class="icon-label">Cuenta</span>
+                    </button>
+                    <button class="icon-btn text-white">
+                        <i class="far fa-heart text-2xl"></i>
+                        <span class="icon-label">Favoritos</span>
+                    </button>
+                    <button class="icon-btn text-white">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                        <span class="cart-badge absolute top-0 right-0 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
+                        <span class="icon-label">Carrito</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegación de categorías -->
+        <div class="py-3 px-6">
+            <div class="max-w-7xl mx-auto flex justify-center gap-2">
+                <a href="vistas/gaming.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                    <i class="fas fa-gamepad mr-2 text-[#5BC0FF]"></i>
+                    Gaming
+                </a>
+                <a href="vistas/software.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                    <i class="fas fa-desktop mr-2 text-[#5BC0FF]"></i>
+                    Software
+                </a>
+                <a href="vistas/suscripciones.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                    <i class="fas fa-sync-alt mr-2 text-[#5BC0FF]"></i>
+                    Suscripciones
+                </a>
+                <a href="vistas/tarjetasderegalo.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                    <i class="fas fa-gift mr-2 text-[#5BC0FF]"></i>
+                    Gift Cards
+                </a>
+                <a href="plus.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-[#5BC0FF]/20 to-transparent border border-[#5BC0FF]/30">
+                    <i class="fas fa-crown mr-2 text-[#5BC0FF]"></i>
+                    KeyRush Plus
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="relative bg-gradient-to-b from-gray-900 to-black">
+        <div class="h-[500px] overflow-hidden relative">
+            <div class="absolute inset-0">
+                <img src="images/img_halloween.png" alt="Banner" class="w-full h-full object-cover opacity-40 blur-sm">
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="flex gap-6 px-6">
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/3001/AlYV7v5B6nny9nxu10jrV2r5.png" alt="The Last of Us" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
+                        <img src="https://media.vandal.net/m/12/128350/silent-hill-2-remake-202410813414824_13.jpg" alt="Silent Hill 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="Netflix" class="w-full h-full object-cover">
+                    </div>
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
+                        <img src="https://imgproxy.eneba.games/CrNna-77Ssr7-HRkHyOkSxDYNZ1hgcQ2yyvIsvXZ7B0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9L/bk5nalN0V2RHcmxV/cmhWLUZ4LU84dXBu/aUVkLU9wdnZqNTJR/TUY0OUo4LmpwZWc" alt="Gift Card" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="promo-banner py-4 text-center">
+            <p class="text-white text-lg font-bold tracking-wide">
+                🎃 PROMOCIÓN ESPECIAL - VÁLIDO HASTA EL 31 DE OCTUBRE
+            </p>
+        </div>
+    </header>
+
+    <!-- Sección: Lo Más Vendido -->
+    <section class="py-16 px-6 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">LO MÁS VENDIDO</h2>
+                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                    VER TODO <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden" onclick="window.location.href='#'">
+                        <img src="https://i.redd.it/zzo4ouqeep5d1.jpeg" alt="Project Zomboid" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3 flex flex-wrap gap-2">
+                            <span class="category-badge">Steam Global</span>
+                            <span class="product-type-badge key">Key</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Project Zomboid</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <span class="price-label">Desde</span>
+                                <span class="price-value">$20.30</span>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3 flex flex-wrap gap-2">
+                            <span class="category-badge">Rockstar</span>
+                            <span class="product-type-badge account">Cuenta</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">GTA V Premium</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <span class="price-label">Desde</span>
+                                <span class="price-value">$15.99</span>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3 flex flex-wrap gap-2">
+                            <span class="category-badge">Steam Global</span>
+                            <span class="product-type-badge key">Key</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Baldur's Gate 3</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <span class="price-label">Desde</span>
+                                <span class="price-value">$45.99</span>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3 flex flex-wrap gap-2">
+                            <span class="category-badge">Steam Global</span>
+                            <span class="product-type-badge key">Key</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Elden Ring</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <span class="price-label">Desde</span>
+                                <span class="price-value">$39.99</span>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg" alt="Call of Duty" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3 flex flex-wrap gap-2">
+                            <span class="category-badge">Battle.net</span>
+                            <span class="product-type-badge key">Key</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">COD MW III</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <span class="price-label">Desde</span>
+                                <span class="price-value">$54.99</span>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+    </section>
+    <!-- Sección: Software -->
+    <section class="py-16 px-6 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">SOFTWARE</h2>
+                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                    VER TODO <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://images.g2a.com/300x400/1x1x1/autodesk-autocad-2025-pc-1-device-3-years-autodesk-key-global-i10000506106002/94e1b03594104d19ba365d7f" alt="AutoCAD" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3 flex flex-wrap gap-2">
+                            <span class="category-badge">3 Años - 1 PC</span>
+                            <span class="product-type-badge key">Licencia</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">AutoCAD 2025</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <span class="price-label">Desde</span>
+                                <span class="price-value">$89.99</span>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://assets.thehansindia.com/h-upload/2025/02/07/1521472-capcut.webp" alt="CapCut" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">12 Meses</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">CapCut Pro</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$24.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://www.dateks.lv/images/pic/2400/2400/390/1163.jpg" alt="Windows" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">Licencia Digital</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Windows 11 Pro</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$12.50</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://ezonmexico.com/cdn/shop/articles/Portada_ChatGPT_01.jpg?v=1677083181" alt="ChatGPT" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">1 Mes Premium</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">ChatGPT Plus</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$15.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://m.media-amazon.com/images/I/71eWNAYa23L._AC_UF1000,1000_QL80_.jpg" alt="Office" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">1 Año - 5 PC</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Office 365</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$29.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Suscripciones -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">SUSCRIPCIONES</h2>
+                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                    VER TODO <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="Netflix" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">30 Días - 4K</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Netflix Premium</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$6.50</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://ezonmexico.com/cdn/shop/articles/Portada_ChatGPT_01.jpg?v=1677083181" alt="ChatGPT" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">Mensual</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">ChatGPT Plus</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$15.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://play-lh.googleusercontent.com/7ynvVIRdhJNAngCg_GI7i8TtH8BqkJYmffeUHsG-mJOdzt1XLvGmbsKuc5Q1SInBjDKN=w240-h480-rw" alt="YouTube" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">3 Meses</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">YouTube Premium</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$9.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png" alt="Spotify" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">6 Meses</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Spotify Premium</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$19.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://assets.thehansindia.com/h-upload/2025/02/07/1521472-capcut.webp" alt="CapCut" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">Anual</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">CapCut Pro</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$24.99</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Tarjetas de Regalo -->
+    <section class="py-16 px-6 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">GIFT CARDS</h2>
+                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                    VER TODO <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Card 1 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2023/05/1630790717-xbox-gift-card-10-usa.jpg" alt="Xbox" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">$10 USD</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Xbox Gift Card</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$9.50</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png" alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">$10 USD</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Steam Wallet</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$9.75</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://imgproxy.eneba.games/CrNna-77Ssr7-HRkHyOkSxDYNZ1hgcQ2yyvIsvXZ7B0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9L/bk5nalN0V2RHcmxV/cmhWLUZ4LU84dXBu/aUVkLU9wdnZqNTJR/TUY0OUo4LmpwZWc" alt="PSN" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">$25 USD</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">PSN Card</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$24.00</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png" alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">$50 USD</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Steam Wallet</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$48.50</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                  <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                    <div class="product-image h-64 cursor-pointer overflow-hidden">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png" alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-3">
+                            <span class="category-badge">$50 USD</span>
+                        </div>
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-white text-sm font-bold leading-tight flex-1">Steam Wallet</h3>
+                            <button class="heart-btn text-gray-400 hover:text-red-500 ml-2">
+                                <i class="far fa-heart text-lg"></i>
+                            </button>
+                        </div>
+                        <div class="price-container mb-3">
+                            <div class="price-badge">
+                                <p class="price-label">Desde</p>
+                                <p class="price-value">$48.50</p>
+                            </div>
+                        </div>
+                        <button class="btn-cart w-full py-2.5 rounded-lg font-bold text-sm text-white">
+                            <span><i class="fas fa-shopping-cart mr-2"></i>AÑADIR</span>
+                        </button>
+                    </div>
+                </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-[#0a0a1a] to-black text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+                <!-- Columna 1 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PARA COMPRADORES</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Asistencia al comprador</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Información de la empresa</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Cómo comprar</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Compra con KEYRUSH Plus</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Garantía</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Noticias KEYRUSH</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 2 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PARA VENDEDORES</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Asistencia al vendedor</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Cómo vender</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Importación vía API</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Programa de afiliados</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Colaboraciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">ASISTENCIA</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Términos y condiciones</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Política de privacidad</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Política de cookies</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Política de devoluciones</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PRENSA</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">KEYRUSH News</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">KEYRUSH Insights</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Comunicados</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Web corporativa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 5 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">DESCARGA LA APP</h3>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        ¡Disfruta las mejores ofertas en videojuegos donde quieras!
+                    </p>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                        <span class="ml-2 text-gray-400 text-sm">4.4 - 55,900 votos</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
+                            <i class="fab fa-apple text-xl"></i>
+                            <span>iOS</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <span>Android</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información empresarial -->
+            <div class="border-t border-gray-800 pt-12 pb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold mb-3 text-sm">KEYRUSH.COM Limited</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            31/7, Tower Two, Times Square, 1<br>
+                            Matheson Rd, Hong Kong<br>
+                            Registro: 625.6421
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3 text-sm">KEYRUSH LLC</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            107 South Capitol Street, Suite 250<br>
+                            Nevada (1971), USA<br>
+                            Registro: 836277.62314
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3 text-sm">KEYRUSH.COM Direct E.K</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            James Wattstrasse 77 A.3, 1970s<br>
+                            Poltra Rubina<br>
+                            Registro: 89775561
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="flex justify-center gap-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+
+                <!-- Métodos de pago -->
+                <div class="text-center mb-8">
+                    <h4 class="text-sm font-bold mb-4 text-gray-400">MÉTODOS DE PAGO ACEPTADOS</h4>
+                    <div class="flex justify-center gap-4 flex-wrap">
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-cc-visa text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-cc-mastercard text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-cc-paypal text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-bitcoin text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fas fa-wallet text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-800 pt-8 text-center">
+                    <p class="text-gray-400 text-xs leading-relaxed max-w-4xl mx-auto">
+                        El uso de la plataforma KEYRUSH.COM implica la aceptación de nuestros <a href="#" class="text-[#5BC0FF] hover:underline">Términos y Condiciones</a>. Puedes encontrar información sobre cómo procesamos tus datos personales en la <a href="#" class="text-[#5BC0FF] hover:underline">Política de Privacidad y Cookies</a>.
+                    </p>
+                    <p class="text-gray-500 text-xs mt-4">
+                        © 2025 KEYRUSH Group. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
+

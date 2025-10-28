@@ -1,0 +1,39 @@
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            color: white;
+        }
+        .navbar-bg {
+            background-color: #000000ff;
+        }
+        .search-input {
+            background-color: #1A1A2E;
+            border: 1px solid #2D2D42;
+            color: white;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #5BC0FF;
+        }
+        .nav-item {
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .nav-item:hover {
+            background-color: #1A1A2E;
+        }
+        .icon-btn {
+            transition: all 0.3s ease;
+        }
+        .icon-btn:hover {
+            transform: scale(1.1);
+            color: #5BC0FF;
+        }
+        .blue-accent {
+            color: #5BC0FF;
+        }
+        .blue-bg {
+            background-color: rgba(91, 192, 255, 0.2);
+        }
+        .blue-border {
+            border-color: #5BC0FF;
+        }
