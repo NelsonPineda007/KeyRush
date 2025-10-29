@@ -6,80 +6,75 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/suscripciones.css">
+    <link rel="stylesheet" href="../css/suscripciones1.css">
     <title>KeyRush</title>
 </head>
 <body>
 
-    <!-- navbar -->
-    <nav class="navbar-bg">
-        <div class="py-3 px-6 border-b border-gray-800">
-            <div class="flex items-center justify-between">
-            <div class="flex items-center">
-                <a href="../index.php">
-                <img src="../images/logo.png" 
-                alt="KeyRush Logo" 
-                class="h-20">
-                </a>
-            </div>
-                
-                <div class="flex-1 max-w-xl mx-8">
-                    <div class="relative">
-                        <input type="text" placeholder="Buscar juegos, software, gift cards..." 
-                               class="w-full py-2 px-4 pr-10 rounded-lg search-input">
-                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#5BC0FF]">
-                            <i class="fas fa-search"></i>
+     <!-- navbar -->
+   <nav class="navbar-bg sticky top-0 z-50">
+        <div class="py-4 px-6 border-b border-gray-800/50">
+            <div class="max-w-7xl mx-auto flex items-center justify-between gap-8">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="../index.html" class="block transition-transform hover:scale-105">
+                        <img src="../images/logo.png" alt="KeyRush" class="h-16">
+                    </a>
+                </div>
+
+                <!-- Búsqueda -->
+                <div class="flex-1 max-w-2xl">
+                    <div class="relative group">
+                        <input type="text" placeholder="Buscar juegos, software, suscripciones..." class="w-full py-3 px-5 pr-12 rounded-xl search-input text-sm">
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#5BC0FF] transition-colors">
+                            <i class="fas fa-search text-lg"></i>
                         </button>
                     </div>
                 </div>
-                
-                <div class="flex items-center space-x-6">
-                    <button class="icon-btn text-white text-xl relative">
-                        <i class="far fa-user"></i>
+
+                <!-- Iconos de acción -->
+                <div class="flex items-center gap-6">
+                    <button class="icon-btn text-white">
+                        <i class="far fa-user text-2xl"></i>
+                        <span class="icon-label">Cuenta</span>
                     </button>
-                    <button class="icon-btn text-white text-xl relative">
-                        <i class="far fa-heart"></i>
+                    <button class="icon-btn text-white">
+                        <i class="far fa-heart text-2xl"></i>
+                        <span class="icon-label">Favoritos</span>
                     </button>
-                    <button class="icon-btn text-white text-xl relative">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="absolute -top-2 -right-2 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                    <button class="icon-btn text-white">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                        <span class="cart-badge absolute top-0 right-0 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
+                        <span class="icon-label">Carrito</span>
                     </button>
                 </div>
             </div>
         </div>
-        
-        <div class="py-2 px-6">
-            <div class="flex justify-center space-x-8">
-                <!-- Gaming -->
-                <a href="../vistas/gaming.php" class="nav-item flex items-center py-2 px-4 text-white hover:text-[#5BC0FF]">
+
+        <!-- Navegación de categorías -->
+        <div class="py-3 px-6">
+            <div class="max-w-7xl mx-auto flex justify-center gap-2">
+                <a href="" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-gamepad mr-2 text-[#5BC0FF]"></i>
-                    <span>Gaming</span>
+                    Gaming
                 </a>
-                
-                <!-- Software -->
-                <a href="../vistas/software.php" class="nav-item flex items-center py-2 px-4 text-white hover:text-[#5BC0FF]">
+                <a href="../vistas/software.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-desktop mr-2 text-[#5BC0FF]"></i>
-                    <span>Software</span>
+                    Software
                 </a>
-                
-                <!-- Suscripciones -->
-                <a href="" class="nav-item flex items-center py-2 px-4 text-white hover:text-[#5BC0FF]">
+                <a href="../vistas/suscripciones.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-sync-alt mr-2 text-[#5BC0FF]"></i>
-                    <span>Suscripciones</span>
+                    Suscripciones
                 </a>
-                
-                <!-- Tarjeta de regalo -->
-                <a href="../vistas/tarjetasderegalo.php" class="nav-item flex items-center py-2 px-4 text-white hover:text-[#5BC0FF]">
+                <a href="../vistas/tarjetasderegalo.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-gift mr-2 text-[#5BC0FF]"></i>
-                    <span>Tarjeta de Regalo</span>
+                    Gift Cards
                 </a>
-                
-                <!-- KeyRush Plus -->
-                <a href="../vistas/plus.php" class="nav-item flex items-center py-2 px-4 text-white blue-bg rounded-lg hover:text-[#5BC0FF]">
+                <a href="../vistas/plus.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-[#5BC0FF]/20 to-transparent border border-[#5BC0FF]/30">
                     <i class="fas fa-crown mr-2 text-[#5BC0FF]"></i>
-                    <span>KeyRush Plus</span>
+                    KeyRush Plus
                 </a>
             </div>
         </div>
@@ -89,111 +84,160 @@
         <br>
     </header>
 
-    <footer class="bg-[#000000] text-white py-12 px-6">
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-[#0a0a1a] to-black text-white py-16 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                
-                <!-- PARA COMPRADORES -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+                <!-- Columna 1 -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4">PARA COMPRADORES</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white">Asistencia al comprador</a></li>
-                        <li><a href="#" class="hover:text-white">Información de la empresa</a></li>
-                        <li><a href="#" class="hover:text-white">Cómo comprar</a></li>
-                        <li><a href="#" class="hover:text-white">Compra con KEYRUSH Plus</a></li>
-                        <li><a href="#" class="hover:text-white">Guarda con KEYRUSH</a></li>
-                        <li><a href="#" class="hover:text-white">Guárnica</a></li>
-                        <li><a href="#" class="hover:text-white">Noticias KEYRUSH</a></li>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PARA COMPRADORES</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Asistencia al comprador</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Información de la empresa</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Cómo comprar</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Compra con KEYRUSH Plus</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Garantía</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Noticias KEYRUSH</a></li>
                     </ul>
                 </div>
 
-                <!-- PARA VENDEDORES -->
+                <!-- Columna 2 -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4">PARA VENDEDORES</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white">Asistencia al vendedor</a></li>
-                        <li><a href="#" class="hover:text-white">Cómo vender</a></li>
-                        <li><a href="#" class="hover:text-white">Importación via API</a></li>
-                        <li><a href="#" class="hover:text-white">Prueba KEYRUSH A6s</a></li>
-                        <li><a href="#" class="hover:text-white">Programa de colaboración</a></li>
-                        <li><a href="#" class="hover:text-white">Colaboraciones con creadores</a></li>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PARA VENDEDORES</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Asistencia al vendedor</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Cómo vender</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Importación vía API</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Programa de afiliados</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Colaboraciones</a></li>
                     </ul>
                 </div>
 
-                <!-- ASISTENCIA -->
+                <!-- Columna 3 -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4">ASISTENCIA</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white">Términos y condiciones</a></li>
-                        <li><a href="#" class="hover:text-white">Política de privacidad y cookies</a></li>
-                        <li><a href="#" class="hover:text-white">Ley de Servicios Digitales</a></li>
-                        <li><a href="#" class="hover:text-white">Política de devoluciones</a></li>
-                        <li><a href="#" class="hover:text-white">Categoría mapa</a></li>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">ASISTENCIA</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Términos y condiciones</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Política de privacidad</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Política de cookies</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Política de devoluciones</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Mapa del sitio</a></li>
                     </ul>
                 </div>
 
-                <!-- PRENSA -->
+                <!-- Columna 4 -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4">PRENSA</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white">KEYRUSH News - gaming y tendencias</a></li>
-                        <li><a href="#" class="hover:text-white">KEYRUSH Insights - empresas y tecnología</a></li>
-                        <li><a href="#" class="hover:text-white">Comunicados de prensa</a></li>
-                        <li><a href="#" class="hover:text-white">Colaboración prensa</a></li>
-                        <li><a href="#" class="hover:text-white">Web corporativa</a></li>
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PRENSA</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">KEYRUSH News</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">KEYRUSH Insights</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Comunicados</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Web corporativa</a></li>
                     </ul>
                 </div>
 
-                <!-- APP -->
+                <!-- Columna 5 -->
                 <div>
-                    <h3 class="font-bold text-lg mb-4">DESCARGA LA APP</h3>
-                    <p class="text-gray-300 mb-4">
-                        ¡Disfruta las mejores ofertas en videojuegos allá donde vayas!
+                    <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">DESCARGA LA APP</h3>
+                    <p class="text-gray-300 mb-4 text-sm">
+                        ¡Disfruta las mejores ofertas en videojuegos donde quieras!
                     </p>
-                    <div class="flex items-center mb-2">
-                        <div class="text-yellow-400">★★★★★</div>
-                        <span class="ml-2 text-gray-300">4.4 - 55,900 votos</span>
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                        <span class="ml-2 text-gray-400 text-sm">4.4 - 55,900 votos</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
+                            <i class="fab fa-apple text-xl"></i>
+                            <span>iOS</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <span>Android</span>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- INFORMACIÓN EMPRESAS -->
-            <div class="border-t border-gray-700 mt-8 pt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="font-bold mb-2">KEYRUSH.COM Limited</h4>
-                    <p class="text-gray-300 text-sm">
-                        Dirección: 31/7, Tower Two, Times Square, 1<br>
-                        Matheson Rd, Hong Kong<br>
-                        Número de registro: 625.6421
-                    </p>
+            <!-- Información empresarial -->
+            <div class="border-t border-gray-800 pt-12 pb-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-bold mb-3 text-sm">KEYRUSH.COM Limited</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            31/7, Tower Two, Times Square, 1<br>
+                            Matheson Rd, Hong Kong<br>
+                            Registro: 625.6421
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3 text-sm">KEYRUSH LLC</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            107 South Capitol Street, Suite 250<br>
+                            Nevada (1971), USA<br>
+                            Registro: 836277.62314
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3 text-sm">KEYRUSH.COM Direct E.K</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">
+                            James Wattstrasse 77 A.3, 1970s<br>
+                            Poltra Rubina<br>
+                            Registro: 89775561
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold mb-2">KEYRUSH LLC</h4>
-                    <p class="text-gray-300 text-sm">
-                        Dirección: 107 South Capitol Street, Suite 250,<br>
-                        Nevada (1971), USA<br>
-                        Número de registro: 836277.62314
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-2">KEYRUSH.COM Direct E.K</h4>
-                    <p class="text-gray-300 text-sm">
-                        Dirección: James Wattstrasse 77 A.3, 1970s,<br>
-                        Poltra Rubina<br>
-                        Número de registro: 89775561
-                    </p>
-                </div>
-            </div>
 
-            <!-- TÉRMINOS LEGALES -->
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300 text-sm">
-                <p>
-                    El uso de la plataforma KEYRUSH.COM implica la aceptación de 
-                    <a href="#" class="text-white hover:underline">Términos y Condiciones</a>. 
-                    Puedes encontrar información sobre cómo procesamos tus datos personales en la 
-                    <a href="#" class="text-white hover:underline">Política de Privacidad y Cookies</a>. 
-                    Copyright © KEYRUSH Group. Todos los derechos reservados.
-                </p>
+                <!-- Redes sociales -->
+                <div class="flex justify-center gap-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[#5BC0FF] transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+
+                <!-- Métodos de pago -->
+                <div class="text-center mb-8">
+                    <h4 class="text-sm font-bold mb-4 text-gray-400">MÉTODOS DE PAGO ACEPTADOS</h4>
+                    <div class="flex justify-center gap-4 flex-wrap">
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-cc-visa text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-cc-mastercard text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-cc-paypal text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fab fa-bitcoin text-2xl"></i>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <i class="fas fa-wallet text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-800 pt-8 text-center">
+                    <p class="text-gray-400 text-xs leading-relaxed max-w-4xl mx-auto">
+                        El uso de la plataforma KEYRUSH.COM implica la aceptación de nuestros <a href="#" class="text-[#5BC0FF] hover:underline">Términos y Condiciones</a>. Puedes encontrar información sobre cómo procesamos tus datos personales en la <a href="#" class="text-[#5BC0FF] hover:underline">Política de Privacidad y Cookies</a>.
+                    </p>
+                    <p class="text-gray-500 text-xs mt-4">
+                        © 2025 KEYRUSH Group. Todos los derechos reservados.
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
