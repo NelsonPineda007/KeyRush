@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/index1.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
 </head>
+
 <body class="bg-white">
     <!-- Navbar -->
     <nav class="navbar-bg sticky top-0 z-50">
@@ -26,8 +30,10 @@
                 <!-- Búsqueda -->
                 <div class="flex-1 max-w-2xl">
                     <div class="relative group">
-                        <input type="text" placeholder="Buscar juegos, software, suscripciones..." class="w-full py-3 px-5 pr-12 rounded-xl search-input text-sm">
-                        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#5BC0FF] transition-colors">
+                        <input type="text" placeholder="Buscar juegos, software, suscripciones..."
+                            class="w-full py-3 px-5 pr-12 rounded-xl search-input text-sm">
+                        <button
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#5BC0FF] transition-colors">
                             <i class="fas fa-search text-lg"></i>
                         </button>
                     </div>
@@ -35,17 +41,22 @@
 
                 <!-- Iconos de acción -->
                 <div class="flex items-center gap-6">
-                    <button class="icon-btn text-white">
-                        <i class="far fa-user text-2xl"></i>
-                        <span class="icon-label">Cuenta</span>
-                    </button>
-                    <button class="icon-btn text-white">
-                        <i class="far fa-heart text-2xl"></i>
-                        <span class="icon-label">Favoritos</span>
-                    </button>
+                    <a href="vistas/perfil.html">
+                        <button class="icon-btn text-white">
+                            <i class="far fa-user text-2xl"></i>
+                            <span class="icon-label">Cuenta</span>
+                        </button>
+                    </a>
+                    <a href="vistas/perfil.html#favorites">
+                        <button class="icon-btn text-white">
+                            <i class="far fa-heart text-2xl"></i>
+                            <span class="icon-label">Favoritos</span>
+                        </button>
+                    </a>
                     <button class="icon-btn text-white">
                         <i class="fas fa-shopping-cart text-2xl"></i>
-                        <span class="cart-badge absolute top-0 right-0 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
+                        <span
+                            class="cart-badge absolute top-0 right-0 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
                         <span class="icon-label">Carrito</span>
                     </button>
                 </div>
@@ -55,23 +66,28 @@
         <!-- Navegación de categorías -->
         <div class="py-3 px-6">
             <div class="max-w-7xl mx-auto flex justify-center gap-2">
-                <a href="vistas/gaming.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                <a href="vistas/gaming.php"
+                    class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-gamepad mr-2 text-[#5BC0FF]"></i>
                     Gaming
                 </a>
-                <a href="vistas/software.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                <a href="vistas/software.php"
+                    class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-desktop mr-2 text-[#5BC0FF]"></i>
                     Software
                 </a>
-                <a href="vistas/suscripciones.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                <a href="vistas/suscripciones.php"
+                    class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-sync-alt mr-2 text-[#5BC0FF]"></i>
                     Suscripciones
                 </a>
-                <a href="vistas/tarjetasderegalo.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                <a href="vistas/tarjetasderegalo.php"
+                    class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-gift mr-2 text-[#5BC0FF]"></i>
                     Gift Cards
                 </a>
-                <a href="plus.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-[#5BC0FF]/20 to-transparent border border-[#5BC0FF]/30">
+                <a href="plus.php"
+                    class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-[#5BC0FF]/20 to-transparent border border-[#5BC0FF]/30">
                     <i class="fas fa-crown mr-2 text-[#5BC0FF]"></i>
                     KeyRush Plus
                 </a>
@@ -87,17 +103,25 @@
             </div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="flex gap-6 px-6">
-                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
-                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/3001/AlYV7v5B6nny9nxu10jrV2r5.png" alt="The Last of Us" class="w-full h-full object-cover">
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl"
+                        onclick="window.location.href='#'">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/3001/AlYV7v5B6nny9nxu10jrV2r5.png"
+                            alt="The Last of Us" class="w-full h-full object-cover">
                     </div>
-                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
-                        <img src="https://media.vandal.net/m/12/128350/silent-hill-2-remake-202410813414824_13.jpg" alt="Silent Hill 2" class="w-full h-full object-cover">
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl"
+                        onclick="window.location.href='#'">
+                        <img src="https://media.vandal.net/m/12/128350/silent-hill-2-remake-202410813414824_13.jpg"
+                            alt="Silent Hill 2" class="w-full h-full object-cover">
                     </div>
-                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="Netflix" class="w-full h-full object-cover">
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl"
+                        onclick="window.location.href='#'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png"
+                            alt="Netflix" class="w-full h-full object-cover">
                     </div>
-                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl" onclick="window.location.href='#'">
-                        <img src="https://imgproxy.eneba.games/CrNna-77Ssr7-HRkHyOkSxDYNZ1hgcQ2yyvIsvXZ7B0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9L/bk5nalN0V2RHcmxV/cmhWLUZ4LU84dXBu/aUVkLU9wdnZqNTJR/TUY0OUo4LmpwZWc" alt="Gift Card" class="w-full h-full object-cover">
+                    <div class="hero-card rounded-2xl overflow-hidden w-56 h-80 shadow-2xl"
+                        onclick="window.location.href='#'">
+                        <img src="https://imgproxy.eneba.games/CrNna-77Ssr7-HRkHyOkSxDYNZ1hgcQ2yyvIsvXZ7B0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9L/bk5nalN0V2RHcmxV/cmhWLUZ4LU84dXBu/aUVkLU9wdnZqNTJR/TUY0OUo4LmpwZWc"
+                            alt="Gift Card" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -114,7 +138,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-12">
                 <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">LO MÁS VENDIDO</h2>
-                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                <button
+                    class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
                     VER TODO <i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -122,7 +147,8 @@
                 <!-- Card 1 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden" onclick="window.location.href='#'">
-                        <img src="https://i.redd.it/zzo4ouqeep5d1.jpeg" alt="Project Zomboid" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://i.redd.it/zzo4ouqeep5d1.jpeg" alt="Project Zomboid"
+                            class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3 flex flex-wrap gap-2">
@@ -150,7 +176,8 @@
                 <!-- Card 2 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V"
+                            class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3 flex flex-wrap gap-2">
@@ -178,7 +205,8 @@
                 <!-- Card 3 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg"
+                            alt="Baldur's Gate 3" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3 flex flex-wrap gap-2">
@@ -206,7 +234,8 @@
                 <!-- Card 4 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring"
+                            class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3 flex flex-wrap gap-2">
@@ -234,7 +263,8 @@
                 <!-- Card 5 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg" alt="Call of Duty" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg"
+                            alt="Call of Duty" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3 flex flex-wrap gap-2">
@@ -264,7 +294,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-12">
                 <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">SOFTWARE</h2>
-                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                <button
+                    class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
                     VER TODO <i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -272,7 +303,8 @@
                 <!-- Card 1 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://images.g2a.com/300x400/1x1x1/autodesk-autocad-2025-pc-1-device-3-years-autodesk-key-global-i10000506106002/94e1b03594104d19ba365d7f" alt="AutoCAD" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://images.g2a.com/300x400/1x1x1/autodesk-autocad-2025-pc-1-device-3-years-autodesk-key-global-i10000506106002/94e1b03594104d19ba365d7f"
+                            alt="AutoCAD" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3 flex flex-wrap gap-2">
@@ -300,7 +332,8 @@
                 <!-- Card 2 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://assets.thehansindia.com/h-upload/2025/02/07/1521472-capcut.webp" alt="CapCut" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://assets.thehansindia.com/h-upload/2025/02/07/1521472-capcut.webp" alt="CapCut"
+                            class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -327,7 +360,8 @@
                 <!-- Card 3 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://www.dateks.lv/images/pic/2400/2400/390/1163.jpg" alt="Windows" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://www.dateks.lv/images/pic/2400/2400/390/1163.jpg" alt="Windows"
+                            class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -354,7 +388,8 @@
                 <!-- Card 4 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://ezonmexico.com/cdn/shop/articles/Portada_ChatGPT_01.jpg?v=1677083181" alt="ChatGPT" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://ezonmexico.com/cdn/shop/articles/Portada_ChatGPT_01.jpg?v=1677083181"
+                            alt="ChatGPT" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -381,7 +416,8 @@
                 <!-- Card 5 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://m.media-amazon.com/images/I/71eWNAYa23L._AC_UF1000,1000_QL80_.jpg" alt="Office" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://m.media-amazon.com/images/I/71eWNAYa23L._AC_UF1000,1000_QL80_.jpg"
+                            alt="Office" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -413,7 +449,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-12">
                 <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">SUSCRIPCIONES</h2>
-                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                <button
+                    class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
                     VER TODO <i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -421,7 +458,8 @@
                 <!-- Card 1 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png" alt="Netflix" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png"
+                            alt="Netflix" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -448,7 +486,8 @@
                 <!-- Card 2 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://ezonmexico.com/cdn/shop/articles/Portada_ChatGPT_01.jpg?v=1677083181" alt="ChatGPT" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://ezonmexico.com/cdn/shop/articles/Portada_ChatGPT_01.jpg?v=1677083181"
+                            alt="ChatGPT" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -475,7 +514,8 @@
                 <!-- Card 3 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://play-lh.googleusercontent.com/7ynvVIRdhJNAngCg_GI7i8TtH8BqkJYmffeUHsG-mJOdzt1XLvGmbsKuc5Q1SInBjDKN=w240-h480-rw" alt="YouTube" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://play-lh.googleusercontent.com/7ynvVIRdhJNAngCg_GI7i8TtH8BqkJYmffeUHsG-mJOdzt1XLvGmbsKuc5Q1SInBjDKN=w240-h480-rw"
+                            alt="YouTube" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -502,7 +542,8 @@
                 <!-- Card 4 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png" alt="Spotify" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+                            alt="Spotify" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -529,7 +570,8 @@
                 <!-- Card 5 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://assets.thehansindia.com/h-upload/2025/02/07/1521472-capcut.webp" alt="CapCut" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://assets.thehansindia.com/h-upload/2025/02/07/1521472-capcut.webp" alt="CapCut"
+                            class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -561,7 +603,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-12">
                 <h2 class="section-header text-4xl font-black text-gray-900 tracking-tight">GIFT CARDS</h2>
-                <button class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
+                <button
+                    class="view-more-btn bg-black text-white text-sm font-bold px-6 py-3 rounded-full hover:shadow-lg">
                     VER TODO <i class="fas fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -569,7 +612,8 @@
                 <!-- Card 1 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2023/05/1630790717-xbox-gift-card-10-usa.jpg" alt="Xbox" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2023/05/1630790717-xbox-gift-card-10-usa.jpg"
+                            alt="Xbox" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -596,7 +640,8 @@
                 <!-- Card 2 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png" alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png"
+                            alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -623,7 +668,8 @@
                 <!-- Card 3 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://imgproxy.eneba.games/CrNna-77Ssr7-HRkHyOkSxDYNZ1hgcQ2yyvIsvXZ7B0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9L/bk5nalN0V2RHcmxV/cmhWLUZ4LU84dXBu/aUVkLU9wdnZqNTJR/TUY0OUo4LmpwZWc" alt="PSN" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://imgproxy.eneba.games/CrNna-77Ssr7-HRkHyOkSxDYNZ1hgcQ2yyvIsvXZ7B0/rs:fit:350/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy9L/bk5nalN0V2RHcmxV/cmhWLUZ4LU84dXBu/aUVkLU9wdnZqNTJR/TUY0OUo4LmpwZWc"
+                            alt="PSN" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -650,7 +696,8 @@
                 <!-- Card 4 -->
                 <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png" alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png"
+                            alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -675,9 +722,10 @@
                 </div>
 
                 <!-- Card 5 -->
-                  <div class="product-card rounded-xl overflow-hidden shadow-lg">
+                <div class="product-card rounded-xl overflow-hidden shadow-lg">
                     <div class="product-image h-64 cursor-pointer overflow-hidden">
-                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png" alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
+                        <img src="https://elsalvadorjuegosdigitales.com/wp-content/uploads/2024/11/STEAM-10-USD.png"
+                            alt="Steam" class="w-full h-full object-cover transition-transform duration-500">
                     </div>
                     <div class="p-4">
                         <div class="mb-3">
@@ -710,7 +758,8 @@
                     <h3 class="font-bold text-lg mb-6 text-[#5BC0FF]">PARA COMPRADORES</h3>
                     <ul class="space-y-3 text-gray-300 text-sm">
                         <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Asistencia al comprador</a></li>
-                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Información de la empresa</a></li>
+                        <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Información de la empresa</a>
+                        </li>
                         <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Cómo comprar</a></li>
                         <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Compra con KEYRUSH Plus</a></li>
                         <li><a href="#" class="hover:text-[#5BC0FF] transition-colors">Garantía</a></li>
@@ -764,11 +813,13 @@
                         <span class="ml-2 text-gray-400 text-sm">4.4 - 55,900 votos</span>
                     </div>
                     <div class="flex gap-3">
-                        <a href="#" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
+                        <a href="#"
+                            class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
                             <i class="fab fa-apple text-xl"></i>
                             <span>iOS</span>
                         </a>
-                        <a href="#" class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
+                        <a href="#"
+                            class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors text-sm">
                             <i class="fab fa-google-play text-xl"></i>
                             <span>Android</span>
                         </a>
@@ -849,7 +900,10 @@
                 <!-- Copyright -->
                 <div class="border-t border-gray-800 pt-8 text-center">
                     <p class="text-gray-400 text-xs leading-relaxed max-w-4xl mx-auto">
-                        El uso de la plataforma KEYRUSH.COM implica la aceptación de nuestros <a href="#" class="text-[#5BC0FF] hover:underline">Términos y Condiciones</a>. Puedes encontrar información sobre cómo procesamos tus datos personales en la <a href="#" class="text-[#5BC0FF] hover:underline">Política de Privacidad y Cookies</a>.
+                        El uso de la plataforma KEYRUSH.COM implica la aceptación de nuestros <a href="#"
+                            class="text-[#5BC0FF] hover:underline">Términos y Condiciones</a>. Puedes encontrar
+                        información sobre cómo procesamos tus datos personales en la <a href="#"
+                            class="text-[#5BC0FF] hover:underline">Política de Privacidad y Cookies</a>.
                     </p>
                     <p class="text-gray-500 text-xs mt-4">
                         © 2025 KEYRUSH Group. Todos los derechos reservados.
@@ -860,5 +914,5 @@
     </footer>
     <script src="js/index.js"></script>
 </body>
-</html>
 
+</html>
