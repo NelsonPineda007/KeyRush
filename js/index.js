@@ -78,11 +78,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Funcionalidad de búsqueda
 const searchInput = document.querySelector('.search-input');
-searchInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        console.log('Buscando:', this.value);
-    }
-});
+if (searchInput) {
+    // use keydown (más fiable) y prevenir comportamiento por defecto
+    searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            console.log('Buscando (Enter):', this.value);
+            // Llamar a la función global de búsqueda si existe
+            if (typeof performSearch === 'function') {
+                performSearch();
+            }
+        }
+    });
+}
 
 // Parallax suave en el hero banner
 window.addEventListener('scroll', function () {
@@ -99,7 +107,7 @@ window.addEventListener('scroll', function () {
 function showSection(section) {
     document.querySelectorAll('.content-section').forEach(s => s.classList.add('hidden'));
     document.querySelectorAll('.sidebar-btn').forEach(btn => btn.classList.remove('active'));
-    
+
     if (section === 'purchases') {
         document.getElementById('purchasesSection').classList.remove('hidden');
         document.querySelector('[onclick="showSection(\'purchases\')"]').classList.add('active');
@@ -166,18 +174,24 @@ function copyToClipboard() {
     });
 }
 
-// Close modals on click outside
-document.getElementById('passwordModal').addEventListener('click', function (e) {
-    if (e.target === this) {
-        closePasswordModal();
-    }
-});
+// Close modals on click outside (protegemos para que no rompa en páginas sin estos modales)
+const passwordModalEl = document.getElementById('passwordModal');
+if (passwordModalEl) {
+    passwordModalEl.addEventListener('click', function (e) {
+        if (e.target === this) {
+            closePasswordModal();
+        }
+    });
+}
 
-document.getElementById('orderDetailModal').addEventListener('click', function (e) {
-    if (e.target === this) {
-        closeOrderDetail();
-    }
-});
+const orderDetailModalEl = document.getElementById('orderDetailModal');
+if (orderDetailModalEl) {
+    orderDetailModalEl.addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeOrderDetail();
+        }
+    });
+}
 
 // Animation on scroll
 document.addEventListener('DOMContentLoaded', function () {
@@ -221,32 +235,45 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 // funcionalidad de busqueda
-
 // Funciones para cambiar entre páginas
-        function showHomePage() {
-            document.getElementById('homePage').style.display = 'block';
-            document.getElementById('searchResultsPage').style.display = 'none';
-        }
+function showHomePage() {
+    document.getElementById('homePage').style.display = 'block';
+    document.getElementById('searchResultsPage').style.display = 'none';
+}
 
-        function performSearch() {
-            const searchInput = document.getElementById('mainSearchInput');
-            const searchQuery = searchInput.value.trim();
-            
-            if (searchQuery) {
-                document.getElementById('searchQueryText').textContent = `"${searchQuery}"`;
-                document.getElementById('homePage').style.display = 'none';
-                document.getElementById('searchResultsPage').style.display = 'block';
+function performSearch() {
+    const searchInput = document.getElementById('mainSearchInput');
+    const searchQuery = searchInput.value.trim();
+
+    console.log('Realizando búsqueda:', searchQuery); // Para debugging
+
+    if (searchQuery) {
+        document.getElementById('searchQueryText').textContent = `"${searchQuery}"`;
+        document.getElementById('homePage').style.display = 'none';
+        document.getElementById('searchResultsPage').style.display = 'block';
+
+        // Scroll suave hacia los resultados
+        document.getElementById('searchResultsPage').scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Inicializar la página mostrando la página principal
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Página cargada'); // Para debugging
+    showHomePage();
+
+    // Buscar el input por ID y agregar evento
+    const searchInput = document.getElementById('mainSearchInput');
+    console.log('Input encontrado:', searchInput); // Para debugging
+
+    if (searchInput) {
+        searchInput.addEventListener('keydown', function (e) {
+            console.log('Tecla presionada:', e.key); // Para debugging
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                console.log('Enter detectado'); // Para debugging
+                performSearch();
             }
-        }
-
-        // Inicializar la página mostrando la página principal
-        document.addEventListener('DOMContentLoaded', function() {
-            showHomePage();
-            
-            // Permitir búsqueda con Enter
-            document.getElementById('mainSearchInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    performSearch();
-                }
-            });
         });
+    }
+});
