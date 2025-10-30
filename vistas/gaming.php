@@ -34,19 +34,24 @@
                     </div>
                 </div>
 
-                <!-- Iconos de acción -->
+                  <!-- Iconos de acción -->
                 <div class="flex items-center gap-6">
-                    <button class="icon-btn text-white">
-                        <i class="far fa-user text-2xl"></i>
-                        <span class="icon-label">Cuenta</span>
-                    </button>
-                    <button class="icon-btn text-white">
-                        <i class="far fa-heart text-2xl"></i>
-                        <span class="icon-label">Favoritos</span>
-                    </button>
+                    <a href="perfil.html">
+                        <button class="icon-btn text-white">
+                            <i class="far fa-user text-2xl"></i>
+                            <span class="icon-label">Cuenta</span>
+                        </button>
+                    </a>
+                    <a href="perfil.html#favorites">
+                        <button class="icon-btn text-white">
+                            <i class="far fa-heart text-2xl"></i>
+                            <span class="icon-label">Favoritos</span>
+                        </button>
+                    </a>
                     <button class="icon-btn text-white">
                         <i class="fas fa-shopping-cart text-2xl"></i>
-                        <span class="cart-badge absolute top-0 right-0 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
+                        <span
+                            class="cart-badge absolute top-0 right-0 bg-[#5BC0FF] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
                         <span class="icon-label">Carrito</span>
                     </button>
                 </div>
@@ -56,7 +61,7 @@
         <!-- Navegación de categorías -->
         <div class="py-3 px-6">
             <div class="max-w-7xl mx-auto flex justify-center gap-2">
-                <a href="" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
+                <a href="../vistas/gaming.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg hover:bg-white/5">
                     <i class="fas fa-gamepad mr-2 text-[#5BC0FF]"></i>
                     Gaming
                 </a>
@@ -72,7 +77,7 @@
                     <i class="fas fa-gift mr-2 text-[#5BC0FF]"></i>
                     Gift Cards
                 </a>
-                <a href="../vistas/plus.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-[#5BC0FF]/20 to-transparent border border-[#5BC0FF]/30">
+                <a href="plus.php" class="nav-item flex items-center py-2 px-5 text-white text-sm font-medium rounded-lg bg-gradient-to-r from-[#5BC0FF]/20 to-transparent border border-[#5BC0FF]/30">
                     <i class="fas fa-crown mr-2 text-[#5BC0FF]"></i>
                     KeyRush Plus
                 </a>
