@@ -220,3 +220,33 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// funcionalidad de busqueda
+
+// Funciones para cambiar entre páginas
+        function showHomePage() {
+            document.getElementById('homePage').style.display = 'block';
+            document.getElementById('searchResultsPage').style.display = 'none';
+        }
+
+        function performSearch() {
+            const searchInput = document.getElementById('mainSearchInput');
+            const searchQuery = searchInput.value.trim();
+            
+            if (searchQuery) {
+                document.getElementById('searchQueryText').textContent = `"${searchQuery}"`;
+                document.getElementById('homePage').style.display = 'none';
+                document.getElementById('searchResultsPage').style.display = 'block';
+            }
+        }
+
+        // Inicializar la página mostrando la página principal
+        document.addEventListener('DOMContentLoaded', function() {
+            showHomePage();
+            
+            // Permitir búsqueda con Enter
+            document.getElementById('mainSearchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
