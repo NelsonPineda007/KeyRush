@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KeyRush - Iniciar Sesión</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes gradient {
@@ -25,6 +21,18 @@
         }
         .animate-float {
             animation: float 6s ease-in-out infinite;
+        }
+        .spinner {
+            border: 2px solid #f3f4f6;
+            border-top: 2px solid #3b82f6;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -95,6 +103,51 @@
                     <p class="text-gray-600">Accede a tu cuenta de KeyRush</p>
                 </div>
 
+                <!-- Mensaje de Error -->
+                <?php if (isset($_GET['error']) && $_GET['error'] === 'credenciales_invalidas'): ?>
+                <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl animate-pulse">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-red-800">Error de autenticación</h3>
+                            <p class="text-sm text-red-600 mt-1">El correo electrónico o la contraseña son incorrectos. Por favor, verifica tus datos.</p>
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+                <!-- Mensaje de Login Exitoso -->
+                <?php if (isset($_GET['success']) && $_GET['success'] === 'login_exitoso'): ?>
+                <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-sm font-semibold text-green-800">¡Inicio de sesión exitoso!</h3>
+                            <p class="text-sm text-green-600 mt-1">Bienvenido de vuelta. Redirigiendo a tu cuenta...</p>
+                            <div class="mt-2 flex items-center gap-2">
+                                <div class="spinner"></div>
+                                <span class="text-xs text-green-600">Preparando tu experiencia KeyRush</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    // Redirigir después de 3 segundos
+                    setTimeout(() => {
+                        window.location.href = '../index.html';
+                    }, 3000);
+                </script>
+                <?php endif; ?>
+
                 <!-- Botones Sociales -->
                 <div class="grid grid-cols-2 gap-3 mb-6">
                     <button type="button" class="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition group">
@@ -126,29 +179,37 @@
                 </div>
 
                 <!-- Formulario -->
-                <form class="space-y-5">
+                <form class="space-y-5" action="../controllers/login.controllers.php" method="POST">
+                    <!-- Email -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
                             Correo electrónico
                         </label>
                         <input 
                             type="email" 
+                            id="email"
+                            name="email"
                             placeholder="tu@email.com"
                             class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                            required
                         >
                     </div>
 
+                    <!-- Contraseña -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
                             Contraseña
                         </label>
                         <div class="relative">
                             <input 
                                 type="password" 
+                                id="password"
+                                name="password"
                                 placeholder="••••••••"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                required
                             >
-                            <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2">
+                            <button type="button" id="togglePassword" class="absolute right-3 top-1/2 -translate-y-1/2">
                                 <svg class="w-5 h-5 text-gray-400 hover:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -159,7 +220,7 @@
 
                     <div class="flex items-center justify-between text-sm">
                         <label class="flex items-center cursor-pointer group">
-                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <input type="checkbox" name="remember" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
                             <span class="ml-2 text-gray-600 group-hover:text-gray-900">Recordarme</span>
                         </label>
                         <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">
@@ -183,16 +244,26 @@
                     </a>
                 </p>
             </div>
-
-            <!-- Info Extra -->
-            <div class="mt-6 text-center">
-                <p class="text-xs text-gray-500">
-                    Al continuar, aceptas nuestros 
-                    <a href="#" class="text-blue-600 hover:underline">Términos de Servicio</a> y 
-                    <a href="#" class="text-blue-600 hover:underline">Política de Privacidad</a>
-                </p>
-            </div>
         </div>
     </div>
+
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        });
+
+        // Auto-ocultar mensaje de error después de 5 segundos
+        setTimeout(() => {
+            const errorMessage = document.querySelector('.bg-red-50');
+            if (errorMessage) {
+                errorMessage.style.opacity = '0';
+                errorMessage.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => errorMessage.remove(), 500);
+            }
+        }, 5000);
+    </script>
 </body>
 </html>

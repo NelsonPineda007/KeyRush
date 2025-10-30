@@ -22,6 +22,18 @@
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
+        .spinner {
+            border: 2px solid #f3f4f6;
+            border-top: 2px solid #3b82f6;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center p-4">
@@ -31,7 +43,7 @@
         <!-- Sección Izquierda - Ilustración/Branding -->
         <div class="flex-1 text-center lg:text-left space-y-6 animate-float">
             <div class="inline-flex items-center justify-center lg:justify-start gap-3 mb-4">
-                <img src="../images/logo.png" alt="KeyRush" class="h-16 w-auto">
+                <img src="../images/icon.png" alt="KeyRush" class="h-16 w-auto">
             </div>
             
             <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -91,6 +103,77 @@
                     <p class="text-gray-600">Completa el formulario para registrarte</p>
                 </div>
 
+                <!-- Mensaje 1: Rojo - Requisitos inválidos -->
+                <?php if (isset($_GET['error']) && in_array($_GET['error'], ['campos_vacios', 'email_invalido', 'password_invalida'])): ?>
+                <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl animate-pulse">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-red-800">Requisitos inválidos</h3>
+                            <p class="text-sm text-red-600 mt-1">
+                                <?php
+                                $errors = [
+                                    'campos_vacios' => 'Por favor completa todos los campos requeridos.',
+                                    'email_invalido' => 'El formato de email no es válido.',
+                                    'password_invalida' => 'La contraseña no cumple con los requisitos de seguridad.'
+                                ];
+                                echo $errors[$_GET['error']] ?? 'Error en los datos ingresados.';
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+                <!-- Mensaje 2: Amarillo - Correo ya utilizado -->
+                <?php if (isset($_GET['error']) && $_GET['error'] === 'email_existente'): ?>
+                <div class="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0">
+                            <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold text-yellow-800">Correo electrónico ya utilizado</h3>
+                            <p class="text-sm text-yellow-700 mt-1">Este email ya está registrado. Por favor, utiliza otro correo electrónico o inicia sesión.</p>
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+               <!-- Mensaje 3: Verde - Registro exitoso -->
+<?php if (isset($_GET['success']) && $_GET['success'] === 'registro_exitoso'): ?>
+<div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+    <div class="flex items-center gap-3">
+        <div class="flex-shrink-0">
+            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+        </div>
+        <div class="flex-1">
+            <h3 class="text-sm font-semibold text-green-800">¡Registro exitoso!</h3>
+            <p class="text-sm text-green-600 mt-1">Tu cuenta ha sido creada correctamente. Redirigiendo a la página principal...</p>
+            <div class="mt-2 flex items-center gap-2">
+                <div class="spinner"></div>
+                <span class="text-xs text-green-600">Preparando tu experiencia KeyRush</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Redirigir a la página principal después de 3 segundos
+    setTimeout(() => {
+        window.location.href = '../index.html';
+    }, 3000);
+</script>
+<?php endif; ?>
+
                 <!-- Botones Sociales -->
                 <div class="grid grid-cols-2 gap-3 mb-6">
                     <button type="button" class="flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition group">
@@ -122,31 +205,35 @@
                 </div>
 
                 <!-- Formulario -->
-                <form class="space-y-5" id="registerForm">
+                <form class="space-y-5" action="../controllers/register.controllers.php" method="POST">
                     <!-- Email -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
                             Correo electrónico
                         </label>
                         <input 
                             type="email" 
                             id="email"
+                            name="email"
                             placeholder="tu@email.com"
                             class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                            required
                         >
                     </div>
 
                     <!-- Contraseña -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
                             Contraseña
                         </label>
                         <div class="relative">
                             <input 
                                 type="password" 
                                 id="password"
+                                name="password"
                                 placeholder="••••••••"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                                required
                             >
                             <button type="button" id="togglePassword" class="absolute right-3 top-1/2 -translate-y-1/2">
                                 <svg class="w-5 h-5 text-gray-400 hover:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -187,10 +274,9 @@
 
                     <!-- Checkbox Términos -->
                     <div class="flex items-start gap-2">
-                        <input type="checkbox" id="terms" required class="w-4 h-4 mt-0.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                        <input type="checkbox" id="terms" name="terms" required class="w-4 h-4 mt-0.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
                         <label for="terms" class="text-sm text-gray-600 cursor-pointer">
-                            Acepto el uso de cookies. 
-                            <a href="#" class="text-blue-600 hover:underline">Más información</a>
+                            Acepto los Términos de Servicio y Política de Privacidad
                         </label>
                     </div>
 
@@ -230,7 +316,17 @@
             passwordInput.setAttribute('type', type);
         });
 
-        // Password validation
+        // Auto-ocultar mensajes después de 5 segundos
+        setTimeout(() => {
+            const errorMessage = document.querySelector('.bg-red-50, .bg-yellow-50');
+            if (errorMessage) {
+                errorMessage.style.opacity = '0';
+                errorMessage.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => errorMessage.remove(), 500);
+            }
+        }, 5000);
+
+        // Password validation (tu código existente)
         const passwordInput = document.getElementById('password');
         
         passwordInput.addEventListener('input', function() {
@@ -290,28 +386,6 @@
                 uppercaseCheck.querySelector('svg').classList.add('text-gray-300');
                 uppercaseCheck.querySelector('span').classList.remove('text-green-600');
                 uppercaseCheck.querySelector('span').classList.add('text-gray-500');
-            }
-        });
-
-        // Form submission
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const password = document.getElementById('password').value;
-            const terms = document.getElementById('terms').checked;
-            
-            // Validate all requirements
-            const validLength = password.length >= 8;
-            const hasSpecial = /[\d\W]/.test(password);
-            const hasLowercase = /[a-z]/.test(password);
-            const hasUppercase = /[A-Z]/.test(password);
-            
-            if (validLength && hasSpecial && hasLowercase && hasUppercase && terms) {
-                alert('¡Cuenta creada exitosamente!');
-                // Aquí iría la lógica para crear la cuenta
-            } else if (!terms) {
-                alert('Debes aceptar los términos y condiciones');
-            } else {
-                alert('Por favor, cumple con todos los requisitos de contraseña');
             }
         });
     </script>
