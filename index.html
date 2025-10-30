@@ -755,140 +755,140 @@
                     </div>
         </section>
     </div>
-    <!-- Página de resultados de búsqueda -->
-    <div id="searchResultsPage" class="search-results-page">
-        <div class="max-w-7xl mx-auto px-6 py-8">
-            <!-- Header de búsqueda -->
-            <div class="search-header">
-                <div class="search-info">
-                    <div class="results-count">
-                        Resultados para: <strong id="searchQueryText">"Producto buscado"</strong> - <strong
-                            id="resultsCount">24</strong> productos encontrados
-                    </div>
-                    <div>
-                        <select class="sort-select">
-                            <option>Ordenar por: Más relevantes</option>
-                            <option>Precio: Menor a mayor</option>
-                            <option>Precio: Mayor a menor</option>
-                            <option>Nombre: A-Z</option>
-                            <option>Nombre: Z-A</option>
-                        </select>
+        <!-- Página de resultados de búsqueda -->
+        <div id="searchResultsPage" class="search-results-page">
+            <div class="max-w-7xl mx-auto px-6 py-8">
+                <!-- Header de búsqueda -->
+                <div class="search-header">
+                    <div class="search-info">
+                        <div class="results-count">
+                            Resultados para: <strong id="searchQueryText">"Producto buscado"</strong> - <strong
+                                id="resultsCount">24</strong> productos encontrados
+                        </div>
+                        <div>
+                            <select class="sort-select">
+                                <option>Ordenar por: Más relevantes</option>
+                                <option>Precio: Menor a mayor</option>
+                                <option>Precio: Mayor a menor</option>
+                                <option>Nombre: A-Z</option>
+                                <option>Nombre: Z-A</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                <!-- Filtros -->
-                <div class="lg:col-span-1">
-                    <div class="filter-section">
-                        <div class="filter-title">Plataforma</div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="platform-steam" checked>
-                            <label for="platform-steam">Steam</label>
-                            <span class="filter-count">12</span>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="platform-epic">
-                            <label for="platform-epic">Epic Games</label>
-                            <span class="filter-count">5</span>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="platform-battlenet">
-                            <label for="platform-battlenet">Battle.net</label>
-                            <span class="filter-count">3</span>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="platform-rockstar">
-                            <label for="platform-rockstar">Rockstar</label>
-                            <span class="filter-count">2</span>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="platform-origin">
-                            <label for="platform-origin">Origin</label>
-                            <span class="filter-count">2</span>
-                        </div>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-title">Tipo de Producto</div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="type-key" checked>
-                            <label for="type-key">Key</label>
-                            <span class="filter-count">15</span>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="type-account">
-                            <label for="type-account">Cuenta</label>
-                            <span class="filter-count">6</span>
-                        </div>
-                        <div class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" id="type-subscription">
-                            <label for="type-subscription">Suscripción</label>
-                            <span class="filter-count">3</span>
-                        </div>
-                    </div>
-                    <!-- Region Filter -->
-                    <div class="filter-section">
-                        <h3 class="filter-title">Región</h3>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="global" onchange="applyFilters()">
-                            <span>Global</span>
-                            <span class="filter-count">247</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="europe" onchange="applyFilters()">
-                            <span>Europa</span>
-                            <span class="filter-count">52</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="usa" onchange="applyFilters()">
-                            <span>Estados Unidos</span>
-                            <span class="filter-count">97</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="latam" onchange="applyFilters()">
-                            <span>Latinoamérica</span>
-                            <span class="filter-count">45</span>
-                        </label>
-                    </div>
-
-                    <!-- Type Filter -->
-                    <div class="filter-section">
-                        <h3 class="filter-title">Tipo de Licencia</h3>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="key" onchange="applyFilters()">
-                            <span>Clave/Key</span>
-                            <span class="filter-count">208</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="account" onchange="applyFilters()">
-                            <span>Cuenta</span>
-                            <span class="filter-count">51</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="gift" onchange="applyFilters()">
-                            <span>Gift Card</span>
-                            <span class="filter-count">20</span>
-                        </label>
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" value="subscription"
-                                onchange="applyFilters()">
-                            <span>Suscripción</span>
-                            <span class="filter-count">15</span>
-                        </label>
-                    </div>
-
-                    <div class="filter-section">
-                        <div class="filter-title">Precio</div>
-                        <div class="space-y-4">
-                            <div class="flex gap-2">
-                                <input type="number" class="price-input" placeholder="Mínimo" value="0">
-                                <input type="number" class="price-input" placeholder="Máximo" value="100">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Filtros -->
+                    <div class="lg:col-span-1">
+                        <div class="filter-section">
+                            <div class="filter-title">Plataforma</div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="platform-steam" checked>
+                                <label for="platform-steam">Steam</label>
+                                <span class="filter-count">12</span>
                             </div>
-                            <button class="btn-clear">Limpiar filtros</button>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="platform-epic">
+                                <label for="platform-epic">Epic Games</label>
+                                <span class="filter-count">5</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="platform-battlenet">
+                                <label for="platform-battlenet">Battle.net</label>
+                                <span class="filter-count">3</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="platform-rockstar">
+                                <label for="platform-rockstar">Rockstar</label>
+                                <span class="filter-count">2</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="platform-origin">
+                                <label for="platform-origin">Origin</label>
+                                <span class="filter-count">2</span>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <div class="filter-title">Tipo de Producto</div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="type-key" checked>
+                                <label for="type-key">Key</label>
+                                <span class="filter-count">15</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="type-account">
+                                <label for="type-account">Cuenta</label>
+                                <span class="filter-count">6</span>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" id="type-subscription">
+                                <label for="type-subscription">Suscripción</label>
+                                <span class="filter-count">3</span>
+                            </div>
+                        </div>
+                        <!-- Region Filter -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">Región</h3>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="global" onchange="applyFilters()">
+                                <span>Global</span>
+                                <span class="filter-count">247</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="europe" onchange="applyFilters()">
+                                <span>Europa</span>
+                                <span class="filter-count">52</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="usa" onchange="applyFilters()">
+                                <span>Estados Unidos</span>
+                                <span class="filter-count">97</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="latam" onchange="applyFilters()">
+                                <span>Latinoamérica</span>
+                                <span class="filter-count">45</span>
+                            </label>
+                        </div>
+
+                        <!-- Type Filter -->
+                        <div class="filter-section">
+                            <h3 class="filter-title">Tipo de Licencia</h3>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="key" onchange="applyFilters()">
+                                <span>Clave/Key</span>
+                                <span class="filter-count">208</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="account" onchange="applyFilters()">
+                                <span>Cuenta</span>
+                                <span class="filter-count">51</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="gift" onchange="applyFilters()">
+                                <span>Gift Card</span>
+                                <span class="filter-count">20</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" class="filter-checkbox" value="subscription"
+                                    onchange="applyFilters()">
+                                <span>Suscripción</span>
+                                <span class="filter-count">15</span>
+                            </label>
+                        </div>
+
+                        <div class="filter-section">
+                            <div class="filter-title">Precio</div>
+                            <div class="space-y-4">
+                                <div class="flex gap-2">
+                                    <input type="number" class="price-input" placeholder="Mínimo" value="0">
+                                    <input type="number" class="price-input" placeholder="Máximo" value="100">
+                                </div>
+                                <button class="btn-clear">Limpiar filtros</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <!-- Resultados -->
                 <div class="lg:col-span-3">
