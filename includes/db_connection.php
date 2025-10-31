@@ -1,9 +1,9 @@
 <?php
 $host = 'localhost';
-$dbname = 'keyrush';
+$dbname = 'Tienda_Claves';
 $username = 'root';
 $password = '';
-$port = 3307;  
+$port = 3380;  
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8", $username, $password);

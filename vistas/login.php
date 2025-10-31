@@ -43,7 +43,7 @@
         <!-- Sección Izquierda - Ilustración/Branding -->
         <div class="flex-1 text-center lg:text-left space-y-6 animate-float">
             <div class="inline-flex items-center justify-center lg:justify-start gap-3 mb-4">
-                <img src="../images/icon.png" alt="KeyRush" class="h-16 w-auto">
+                <img src="../images/icon/icon.png" alt="KeyRush" class="h-16 w-auto">
             </div>
             
             <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
