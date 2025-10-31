@@ -9,6 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/giftcard.css">
+            <style>
+        .btn-gradient {
+            background: linear-gradient(135deg, #5bc0ff 0, #4a9fd9 100%);
+        }
+        .hover\:btn-gradient:hover {
+            background: linear-gradient(135deg, #6bcaff 0, #5aafdf 100%);
+        }
+    </style>
     <title>KeyRush</title>
 </head>
 <body>
@@ -85,9 +93,405 @@
         </div>
     </nav>
 
-    <header>
-        <br>
-    </header>
+<header>
+         <!-- Página de resultados de búsqueda -->
+    <div id="searchResultsPage" class="search-results-page">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Filtros -->
+                <div class="lg:col-span-1">
+                    <div class="filter-section bg-white rounded-xl p-5 shadow-sm mb-5">
+                        <div class="filter-title text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">Plataforma</div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="platform-steam" checked>
+                            <label for="platform-steam">Steam</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">12</span>
+                        </div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="platform-epic">
+                            <label for="platform-epic">Epic Games</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">5</span>
+                        </div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="platform-battlenet">
+                            <label for="platform-battlenet">Battle.net</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">3</span>
+                        </div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="platform-rockstar">
+                            <label for="platform-rockstar">Rockstar</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">2</span>
+                        </div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="platform-origin">
+                            <label for="platform-origin">Origin</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">2</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section bg-white rounded-xl p-5 shadow-sm mb-5">
+                        <div class="filter-title text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">Tipo de Producto</div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="type-key" checked>
+                            <label for="type-key">Key</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">15</span>
+                        </div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="type-account">
+                            <label for="type-account">Cuenta</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">6</span>
+                        </div>
+                        <div class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" id="type-subscription">
+                            <label for="type-subscription">Suscripción</label>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">3</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section bg-white rounded-xl p-5 shadow-sm mb-5">
+                        <h3 class="filter-title text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">Región</h3>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="global">
+                            <span>Global</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">247</span>
+                        </label>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="europe">
+                            <span>Europa</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">52</span>
+                        </label>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="usa">
+                            <span>Estados Unidos</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">97</span>
+                        </label>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="latam">
+                            <span>Latinoamérica</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">45</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-section bg-white rounded-xl p-5 shadow-sm mb-5">
+                        <h3 class="filter-title text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">Tipo de Licencia</h3>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="key">
+                            <span>Clave/Key</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">208</span>
+                        </label>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="account">
+                            <span>Cuenta</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">51</span>
+                        </label>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="gift">
+                            <span>Gift Card</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">20</span>
+                        </label>
+                        <label class="filter-option flex items-center py-2 cursor-pointer transition-all duration-200 hover:text-custom-blue">
+                            <input type="checkbox" class="filter-checkbox w-4 h-4 mr-2.5 cursor-pointer accent-custom-blue" value="subscription">
+                            <span>Suscripción</span>
+                            <span class="filter-count ml-auto text-xs text-gray-500 font-medium">15</span>
+                        </label>
+                    </div>
+
+                    <div class="filter-section bg-white rounded-xl p-5 shadow-sm mb-5">
+                        <div class="filter-title text-sm font-bold text-gray-900 mb-4 uppercase tracking-wide">Precio</div>
+                        <div class="space-y-4">
+                            <div class="flex gap-2">
+                                <input type="number" class="price-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm transition-all duration-200 focus:outline-none focus:border-custom-blue focus:ring-2 focus:ring-blue-200" placeholder="Mínimo" value="0">
+                                <input type="number" class="price-input w-full px-3 py-2 border border-gray-300 rounded-lg text-sm transition-all duration-200 focus:outline-none focus:border-custom-blue focus:ring-2 focus:ring-blue-200" placeholder="Máximo" value="100">
+                            </div>
+                            <button class="btn-clear bg-gray-100 text-gray-600 px-4 py-2 rounded-lg text-xs font-semibold border-none cursor-pointer transition-all duration-200 hover:bg-gray-200 mt-3 w-full">Limpiar filtros</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultados -->
+                <div class="lg:col-span-3">
+                    <!-- Resultado 1 -->
+            <!-- Resultado 1 - Steam Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://s.pacn.ws/1/p/11l/steam-gift-card-aed-100-for-united-arab-emirates-currency-only-676759.3.jpg?v=s74yus" alt="Steam Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Steam Gift Card $50 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Steam</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">USA</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo digital para Steam. Canjea crédito en tu cartera de Steam para comprar juegos, software, hardware y más.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$50.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 2 - Amazon Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://m.media-amazon.com/images/G/01/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_us-main._CB468775337_.png" alt="Amazon Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Amazon Gift Card $100 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-orange-50 text-orange-500 border border-orange-200">Amazon</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo digital para Amazon. Compra millones de productos, libros, electrónicos y más en Amazon.com.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$100.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 3 - PlayStation Store Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://static.vecteezy.com/system/resources/previews/020/190/708/non_2x/playstation-ps5-ps4-logo-free-free-vector.jpg">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">PlayStation Store $60 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">PlayStation</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">USA</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para PlayStation Store. Compra juegos, DLC, suscripciones y contenido adicional para PS4 y PS5.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$60.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 4 - Xbox Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://static.vecteezy.com/system/resources/previews/020/336/203/non_2x/xbox-logo-xbox-icon-free-free-vector.jpg">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Xbox Gift Card $25 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Xbox</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo digital para Microsoft Store. Compra juegos, películas, aplicaciones y más para Xbox y Windows.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$25.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 5 - Apple Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://images.seeklogo.com/logo-png/42/1/apple-logo-png_seeklogo-427436.png" alt="Apple Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Apple Gift Card $200 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-gray-50 text-gray-600 border border-gray-200">Apple</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">USA</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para Apple Store. Compra productos Apple, aplicaciones, música, películas y suscripciones.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$200.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 6 - Google Play Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://cdn.mos.cms.futurecdn.net/Q2oLsPvoGLpzWuDqZgzANH-1200-80.jpg" alt="Google Play Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Google Play $30 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Google Play</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para Google Play. Compra aplicaciones, juegos, libros, películas y música en la tienda de Google Play.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$30.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 7 - Nintendo eShop Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://pbs.twimg.com/profile_images/1716358287178817536/MQoRSNJ2_400x400.jpg" alt="Nintendo eShop Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Nintendo eShop $35 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200">Nintendo</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">USA</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para Nintendo eShop. Compra juegos, DLC y contenido adicional para Nintendo Switch y 3DS.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$35.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 8 - Spotify Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://media.designrush.com/inspirations/757501/conversions/BDA-preview.jpg" alt="Spotify Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Spotify Gift Card 3 Meses</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Spotify</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para Spotify Premium. Disfruta de 3 meses de música sin anuncios, modo sin conexión y más.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$29.97</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 9 - Razer Gold Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://assets2.razerzone.com/images/pnx.assets/77a3129a6bcbb490078654285d1bad1d/razer-gold-pin-hero-mobile.webp" alt="Razer Gold Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Razer Gold $75 USD</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Razer</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para Razer Gold. Compra juegos, contenido digital y más en miles de juegos y plataformas.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$75.00</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Resultado 10 - Netflix Gift Card -->
+<div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+    <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+        <img src="https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940" alt="Netflix Gift Card" class="w-full h-full object-cover transition-transform duration-300">
+    </div>
+    <div class="result-content flex-1 flex flex-col justify-between">
+        <div>
+            <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Netflix Gift Card 2 Meses</h3>
+            <div class="result-badges flex gap-2 flex-wrap mb-3">
+                <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-red-50 text-red-600 border border-red-200">Netflix</span>
+                <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Gift Card</span>
+                <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+            </div>
+            <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Tarjeta de regalo para Netflix. Regala 2 meses de streaming ilimitado de películas y series sin anuncios.</p>
+        </div>
+        <div class="result-footer flex justify-between items-center mt-auto">
+            <div class="result-price flex flex-col">
+                <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                <span class="price-value text-2xl font-black text-gray-900">$31.98</span>
+            </div>
+            <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fas fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+        </div>
+    </div>
+</div>
+</header>
 
     <!-- Footer -->
     <footer class="bg-gradient-to-b from-[#0a0a1a] to-black text-white py-16 px-6">

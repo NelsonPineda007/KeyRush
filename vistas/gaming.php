@@ -210,94 +210,288 @@
                 </div>
 
                 <!-- Resultados -->
-                <div class="lg:col-span-3">
-                    <!-- Resultado 1 -->
-                    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-custom-blue">
-                        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
-                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3" class="w-full h-full object-cover transition-transform duration-300">
-                        </div>
-                        <div class="result-content flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Baldur's Gate 3</h3>
-                                <div class="result-badges flex gap-2 flex-wrap mb-3">
-                                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-custom-blue border border-blue-200">Steam</span>
-                                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
-                                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
-                                </div>
-                                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Un juego de rol épico ambientado en el universo de Dungeons & Dragons. Disfruta de una historia profunda y combates tácticos por turnos.</p>
-                            </div>
-                            <div class="result-footer flex justify-between items-center mt-auto">
-                                <div class="result-price flex flex-col">
-                                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
-                                    <span class="price-value text-2xl font-black text-gray-900">$45.99</span>
-                                </div>
-                                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:btn-gradient">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Resultado 2 -->
-                    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-custom-blue">
-                        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
-                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" class="w-full h-full object-cover transition-transform duration-300">
-                        </div>
-                        <div class="result-content flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Elden Ring</h3>
-                                <div class="result-badges flex gap-2 flex-wrap mb-3">
-                                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-custom-blue border border-blue-200">Steam</span>
-                                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
-                                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
-                                </div>
-                                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Un juego de rol de acción en un mundo abierto masivo creado por Hidetaka Miyazaki y George R. R. Martin.</p>
-                            </div>
-                            <div class="result-footer flex justify-between items-center mt-auto">
-                                <div class="result-price flex flex-col">
-                                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
-                                    <span class="price-value text-2xl font-black text-gray-900">$39.99</span>
-                                </div>
-                                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:btn-gradient">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Resultado 3 -->
-                    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-custom-blue">
-                        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
-                            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V" class="w-full h-full object-cover transition-transform duration-300">
-                        </div>
-                        <div class="result-content flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Grand Theft Auto V</h3>
-                                <div class="result-badges flex gap-2 flex-wrap mb-3">
-                                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-custom-blue border border-blue-200">Rockstar</span>
-                                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-orange-50 text-orange-500 border border-orange-200">Cuenta</span>
-                                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
-                                </div>
-                                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Explora el gigantesco y premiado mundo de Los Santos y Blaine County en la experiencia definitiva de Grand Theft Auto V.</p>
-                            </div>
-                            <div class="result-footer flex justify-between items-center mt-auto">
-                                <div class="result-price flex flex-col">
-                                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
-                                    <span class="price-value text-2xl font-black text-gray-900">$15.99</span>
-                                </div>
-                                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:btn-gradient">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    Añadir al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+               <!-- Resultados -->
+<div class="lg:col-span-3">
+    <!-- Resultado 1 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Baldur's Gate 3</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Steam</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
                 </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Un juego de rol épico ambientado en el universo de Dungeons & Dragons. Disfruta de una historia profunda y combates tácticos por turnos.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$45.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
             </div>
         </div>
     </div>
+
+    <!-- Resultado 2 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg" alt="Elden Ring" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Elden Ring</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Steam</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Un juego de rol de acción en un mundo abierto masivo creado por Hidetaka Miyazaki y George R. R. Martin.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$39.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 3 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg" alt="GTA V" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Grand Theft Auto V</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Rockstar</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-orange-50 text-orange-500 border border-orange-200">Cuenta</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Explora el gigantesco y premiado mundo de Los Santos y Blaine County en la experiencia definitiva de Grand Theft Auto V.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$15.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 4 - Cyberpunk 2077 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Cyberpunk 2077</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Steam</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Un RPG de mundo abierto ambientado en Night City, una megalópolis obsesionada con el poder, el glamur y las modificaciones corporales.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$29.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 5 - The Witcher 3 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg" alt="The Witcher 3" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">The Witcher 3: Wild Hunt</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Steam</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Europa</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Eres Geralt de Rivia, cazador de monstruos. En un continente devastado por la guerra, debes encontrar a la niña de la profecía.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$19.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 6 - Red Dead Redemption 2 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Red Dead Redemption 2</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Rockstar</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-orange-50 text-orange-500 border border-orange-200">Cuenta</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">USA</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">América, 1899. Arthur Morgan y la banda de Van der Linde son forajidos en busca de supervivencia en el corazón de América.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$24.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 7 - Call of Duty: Modern Warfare II -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg" alt="Call of Duty" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Call of Duty: Modern Warfare II</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Battle.net</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Call of Duty: Modern Warfare II te sumerge en un conflicto global sin precedentes con operativos icónicos y misiones audaces.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$49.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 8 - FIFA 23 -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1811260/header.jpg" alt="FIFA 23" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">FIFA 23</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Origin</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Latinoamérica</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">FIFA 23 lleva El Juego de Todos al campo con la tecnología HyperMotion2 y la FIFA World Cup™ masculina y femenina.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$34.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 9 - Assassin's Creed Valhalla -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/header.jpg" alt="Assassin's Creed Valhalla" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Assassin's Creed Valhalla</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Epic Games</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Conviértete en Eivor, un legendario saqueador vikingo, y lidera a tu clan desde las costas de Noruega hasta un nuevo hogar en Inglaterra.</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$27.99</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado 10 - Minecraft -->
+    <div class="search-result-card bg-white rounded-xl overflow-hidden transition-all duration-300 border border-gray-200 flex gap-5 p-5 mb-4 hover:-translate-y-1 hover:shadow-lg hover:border-blue-500">
+        <div class="result-image w-44 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+            <img src="https://m.media-amazon.com/images/I/51HjpyEMDoL._AC_UF894,1000_QL80_.jpg" alt="Minecraft" class="w-full h-full object-cover transition-transform duration-300">
+        </div>
+        <div class="result-content flex-1 flex flex-col justify-between">
+            <div>
+                <h3 class="result-title text-lg font-bold text-gray-900 mb-2 leading-tight">Minecraft Java Edition</h3>
+                <div class="result-badges flex gap-2 flex-wrap mb-3">
+                    <span class="badge badge-platform px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-blue-50 text-blue-500 border border-blue-200">Mojang</span>
+                    <span class="badge badge-type px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-green-50 text-green-600 border border-green-200">Key</span>
+                    <span class="badge badge-region px-2.5 py-1 rounded-lg text-xs font-semibold uppercase tracking-wide bg-purple-50 text-purple-600 border border-purple-200">Global</span>
+                </div>
+                <p class="result-description text-sm text-gray-600 leading-relaxed mb-3">Crea, explora y sobrevive en un mundo generado proceduralmente hecho completamente de bloques. ¡La aventura está en tus manos!</p>
+            </div>
+            <div class="result-footer flex justify-between items-center mt-auto">
+                <div class="result-price flex flex-col">
+                    <span class="price-label text-xs text-gray-500 uppercase tracking-wide mb-1">Precio</span>
+                    <span class="price-value text-2xl font-black text-gray-900">$26.95</span>
+                </div>
+                <button class="btn-add btn-gradient text-white px-6 py-3 rounded-lg font-bold border-none cursor-pointer transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-lg">
+                    <i class="fas fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 </header>
 
     <!-- Footer -->
