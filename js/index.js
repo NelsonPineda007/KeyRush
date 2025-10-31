@@ -277,3 +277,128 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+// CARRITO FUNCIONES JS
+
+ let subtotalBase = 32.83;
+        let currentSubscription = 'none';
+
+        function calculateSubtotal() {
+            let total = 0;
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                const price = parseFloat(input.dataset.price);
+                const qty = parseInt(input.value);
+                total += price * qty;
+            });
+            return total;
+        }
+
+        function updateCart() {
+            subtotalBase = calculateSubtotal();
+            updateSubscription();
+        }
+
+        function updateSubscription() {
+            const selected = document.querySelector('input[name="subscription"]:checked');
+            currentSubscription = selected ? selected.value : 'none';
+
+            const discountRow = document.getElementById('discount-row');
+            const subscriptionRow = document.getElementById('subscription-row');
+            const discountEl = document.getElementById('discount');
+            const discountLabel = document.getElementById('discount-label');
+            const subscriptionName = document.getElementById('subscription-name');
+            const subscriptionPriceEl = document.getElementById('subscription-price');
+            const totalEl = document.getElementById('total');
+            const subtotalEl = document.getElementById('subtotal');
+
+            subtotalEl.textContent = `${subtotalBase.toFixed(2)}`;
+
+            let total = subtotalBase;
+            let discount = 0;
+            let subscriptionPrice = 0;
+
+            if (currentSubscription === 'pro') {
+                discount = subtotalBase * 0.15;
+                subscriptionPrice = 9.99;
+                discountLabel.textContent = 'Descuento Pro (15%)';
+                subscriptionName.textContent = 'KeyRush Pro';
+                subscriptionPriceEl.textContent = `${subscriptionPrice.toFixed(2)}`;
+                total = subtotalBase - discount + subscriptionPrice;
+                discountRow.style.display = 'flex';
+                subscriptionRow.style.display = 'flex';
+                discountEl.textContent = `-${discount.toFixed(2)}`;
+            } else if (currentSubscription === 'elite') {
+                discount = subtotalBase * 0.25;
+                subscriptionPrice = 19.99;
+                discountLabel.textContent = 'Descuento Elite (25%)';
+                subscriptionName.textContent = 'KeyRush Elite';
+                subscriptionPriceEl.textContent = `${subscriptionPrice.toFixed(2)}`;
+                total = subtotalBase - discount + subscriptionPrice;
+                discountRow.style.display = 'flex';
+                subscriptionRow.style.display = 'flex';
+                discountEl.textContent = `-${discount.toFixed(2)}`;
+            } else {
+                discountRow.style.display = 'none';
+                subscriptionRow.style.display = 'none';
+            }
+
+            totalEl.textContent = `${total.toFixed(2)}`;
+        }
+
+        function increaseQty(btn) {
+            const input = btn.previousElementSibling;
+            const currentValue = parseInt(input.value);
+            if (currentValue < parseInt(input.max)) {
+                input.value = currentValue + 1;
+                updateCart();
+            }
+        }
+
+        function decreaseQty(btn) {
+            const input = btn.nextElementSibling;
+            const currentValue = parseInt(input.value);
+            if (currentValue > parseInt(input.min)) {
+                input.value = currentValue - 1;
+                updateCart();
+            }
+        }
+
+        function removeItem(btn) {
+            const item = btn.closest('.item-card');
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-20px)';
+            setTimeout(() => {
+                item.remove();
+                updateCart();
+            }, 300);
+        }
+
+        function addSuggested(btn) {
+            btn.innerHTML = '<i class="fas fa-check mr-1"></i>Agregado';
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            setTimeout(() => {
+                btn.closest('.bg-white').style.opacity = '0';
+                setTimeout(() => {
+                    btn.closest('.bg-white').remove();
+                }, 300);
+            }, 1000);
+        }
+
+        function addToCart() {
+            alert('Producto agregado al carrito');
+        }
+
+        function checkout() {
+            const email = document.querySelector('input[type="email"]').value;
+            if (!email) {
+                alert('Por favor ingresa tu correo electrónico');
+                return;
+            }
+            alert('Redirigiendo al proceso de pago...');
+        }
+
+        // Initialize
+        updateSubscription();

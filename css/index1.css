@@ -589,3 +589,194 @@
         .btn-clear:hover {
             background: #e0e0e0;
         }
+
+
+        /*  ESTILOS DE CARRITO HOVER, SUSCRIPCION, ETC.  */
+        .cart-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .item-card {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .item-card:hover {
+            border-color: #5BC0FF;
+            box-shadow: 0 4px 16px rgba(91, 192, 255, 0.15);
+        }
+
+        .subscription-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+            border: 2px solid #5BC0FF;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .subscription-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(91, 192, 255, 0.2);
+        }
+
+        .subscription-card.elite {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-color: #f59e0b;
+        }
+
+        .subscription-card.elite:hover {
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5BC0FF 0%, #4a9fd9 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(91, 192, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #e9ecef;
+            border-color: #dee2e6;
+        }
+
+        .quantity-input {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            width: 70px;
+            text-align: center;
+        }
+
+        .quantity-input:focus {
+            outline: none;
+            border-color: #5BC0FF;
+            box-shadow: 0 0 0 3px rgba(91, 192, 255, 0.1);
+        }
+
+        .offer-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-color: #5BC0FF;
+        }
+
+        .offer-image {
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-card:hover .offer-image img {
+            transform: scale(1.1);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #9ca3af;
+        }
+
+        .subscription-benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 0.875rem;
+        }
+
+        .subscription-benefit i {
+            color: #5BC0FF;
+        }
+
+        .subscription-card.elite .subscription-benefit i {
+            color: #f59e0b;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-top: 16px;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide {
+            animation: slideIn 0.4s ease;
+        }
+
+        .subscription-radio {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .subscription-radio+.subscription-card {
+            border: 2px solid #e5e7eb;
+        }
+
+        .subscription-radio:checked+.subscription-card {
+            border-color: #5BC0FF;
+            box-shadow: 0 0 0 3px rgba(91, 192, 255, 0.1);
+        }
+
+        .subscription-radio:checked+.subscription-card.elite {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
